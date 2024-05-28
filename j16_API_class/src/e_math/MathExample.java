@@ -30,18 +30,50 @@ public class MathExample {
 		// 둘중 큰수를 반환
 		int v7 = Math.max(10, 12);
 		double v8 = Math.max(10.1, 10.4);
+		System.out.println("v7 : " + v7);	// 12
+		System.out.println("v8 : " + v8);	// 10.4 
+		
+		// 두개의 값을 매개변수로 전달 받아 
+		// 둘중 작은 수를 반환
+		int v9 = Math.min(10, 12);
+		double v10 = Math.min(10.1, 10.4);
+		System.out.println("v9 : " + v9);		//	10
+		System.out.println("v10 : " + v10);		//  10.1
+		
+		// 반올림
+		// 소수점 첫째 자리에서 반올림하고
+		// 결과를 double type으로 반환
+		double v11 = Math.rint(5.311);
+		double v12 = Math.rint(5.511);
+		System.out.println("v11 : " + v11);		// 5.0
+		System.out.println("v12 : " + v12);		// 6.0
+		
+		// 반올림 하고 나서 결과를 long type의 정수로 반환
+		long v13 = Math.round(5.451352);
+		System.out.println("v13 : " + v13);		// 5
+		
+		// 거듭제곱
+		double v14 = Math.pow(2, 10); // 2의 10승 
+		System.out.println("v14 : " + v14);		// 1024
+		
+		// 제곱근
+		// 16의 제곱근 4
+		// sqrt (square root)
+		double v15 = Math.sqrt(9);
+		System.out.println("v15 : " + v15);
+		
+		// 두수의 차이를 정수로 반환
+		int v16 = Math.subtractExact(11, -6);
+		System.out.println("v16 : " + v16);   // 17
+		
+		System.out.println(Math.cos(20));
+		System.out.println(Math.sin(20));
+		System.out.println(Math.tan(20));
+		
+		// 0.0 ~ 1미만의 실수
+		// 0.0 <= ~~~ < 1.0
+		double random = Math.random();
+		System.out.println(random);
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
