@@ -21,11 +21,11 @@ public class SimpleDateFormatExample {
 		System.out.println(year+"년"+month+"월"+day+"일");
 		
 		// java.text.*
-		SimpleDateFormat sdf = new SimpleDateFormat();
+		date = new Date(System.currentTimeMillis()); 
+		// 호출 되는 시점에 현재 시간정보를 저장
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd E요일 a KK:mm:ss D");
 		String result = sdf.format(date);
 		System.out.println(result);
-		
-		
 		
 	}
 
