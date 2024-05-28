@@ -38,16 +38,3 @@ public class RegexExample {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
