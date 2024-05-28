@@ -32,6 +32,16 @@ public class DecimalFormatExample {
 		str = df.format(num);
 		System.out.println("##############.## : " + str);
 		
+		df.applyPattern("#,###.#");
+		str = df.format(num);
+		System.out.println("#,###.# : " +str);
+		
+		df.applyPattern("000000000000,000.00");
+		str = df.format(num);
+		System.out.println(str);
+		
+
+		
 	}
 
 }
