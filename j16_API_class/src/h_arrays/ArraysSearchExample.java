@@ -1,5 +1,8 @@
 package h_arrays;
 
+import java.nio.file.spi.FileSystemProvider;
+import java.util.Arrays;
+
 public class ArraysSearchExample {
 
 	public static void main(String[] args) {
@@ -9,6 +12,24 @@ public class ArraysSearchExample {
 		// 인덱스 번호를 반환
 		
 		int[] scores = {1, 5, 3, 10, 7, 9, 8};
+		//              0  1  2   3  4  5  6
+		//             -1 -2 -3  -4 -5 -6 -7 | -8 
+		
+		int index = Arrays.binarySearch(scores, 7);
+		System.out.println("search 7 : " + index);
+		
+		// 배열에 저장된 항목들을 오름 차순으로 정렬
+		Arrays.sort(scores);
+		System.out.println(Arrays.toString(scores));
+		
+		// [1, 3, 5, 7, 8, 9, 10]
+		index = Arrays.binarySearch(scores, 10);
+		System.out.println("search 10 : " + index);
+		
+		index = Arrays.binarySearch(scores, 7);
+		System.out.println("search 7 : " + index);
+		
+		System.out.println("=============================");
 		
 		// 순차 탐색
 		// 리스트 안에 있는 특정한 데이터를 찾기 위해
@@ -21,6 +42,25 @@ public class ArraysSearchExample {
 			}
 		}
 		
+		
+		// sort 배열 항목 정렬
+		String[] names = {"홍길동", "김기환", "이다한" , "최기근"};
+		System.out.println(Arrays.toString(names));
+		
+		Arrays.sort(names);
+		
+		System.out.println(Arrays.toString(names));
+		
+		
+		// fill - 배열 항목의 특정 위치에 있는 항목을 지정된 값으로 변경(채우는) 메소드
+		// names라는 배열 항목의 값중에 1번재 인덱스부터
+		// 3번째 인덱스 이전까지 "최기근"문자열로 채움- 변경
+		Arrays.fill(names,1,3,"최기근");
+		System.out.println(Arrays.toString(names));
+		
+		//모든 항목을 지정된 값으로 변경
+		Arrays.fill(names, null);
+		System.out.println(Arrays.toString(names));
 		
 	}
 
