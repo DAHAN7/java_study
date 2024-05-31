@@ -8,10 +8,14 @@ public class ArraysCopyExample {
 		
 		int[] scores = {100, 60, 70, 80, 90};
 		System.out.println(scores.length);
+		
 		int[] scores2 = new int[scores.length + 1];
+		
 		for(int i = 0; i < scores.length; i++) {
 			scores2[i] = scores[i];
 		}
+		System.out.println(Arrays.toString(scores2));
+		System.out.println("===================================");
 		System.out.println(Arrays.toString(scores));
 		scores2[scores2.length - 1] = 100;
 		System.out.println(Arrays.toString(scores2));
