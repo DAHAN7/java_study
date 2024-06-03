@@ -1,6 +1,5 @@
 package api_practice;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -12,17 +11,26 @@ import java.util.Random;
 public class Practice01ArraysRandomExample {
 
 	public static void main(String[] args) {
-	    Random random = new Random();
-        int[] array = new int[10];
+		
 		int[] arrays = new int[10];	// 10개의 정수값을 저장할 배열
-		for(int i=0;i<array.length;i++) {
-		array[i]=random.nextInt(100)+1;
-		System.out.println("최초의 리스트 :" );
-		System.out.println(Arrays.toString(array));
-		Arrays.sort(array);
-		System.out.println("정렬된 리스트 :");
-		System.out.println(Arrays.toString(array));
+		Random random =new Random();
+		for(int i=0;i<arrays.length;i++) {
+		arrays[i]=random.nextInt(100)+1;
+		
 		}
+		System.out.println("최초의 리스트:"+Arrays.toString(arrays));
+		Arrays.sort(arrays);
+		System.out.println("정렬된 리스트:"+Arrays.toString(arrays));
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
