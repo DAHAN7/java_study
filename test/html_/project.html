@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML5 기본 프로젝트</title>
+    <style>
+      #main-navigation .pull-left,
+        #content,
+        #main-aside,
+        #main-footer{
+            display: inline-block;
+        }
+
+        #main-navigation .pull-left ul.outer-menu,
+        #main-navigation .pull-left ul.outer-menu ul.inner-menu,
+        #main-navigation .pull-right .search-bar form {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        #main-navigation .pull-left ul.outer-menu li.outer-menu-item,
+        #main-navigation .pull-left ul.outer-menu li.outer-menu-item ul.inner-menu,
+        #main-navigation .pull-right .search-bar form {
+            display: inline-block;}
+
+        #content,
+        #main-aside {
+            vertical-align: top;
+        }
+
+        /* 추가된 스타일 */
+        #main-aside {
+            float: right;
+            width: 200px;
+            margin-left: 20px;
+        }
+
+        #content {
+            float: left;
+            width: calc(100% - 220px);
+            /* 카테고리와 최근 글 aside 너비 + 여백 */
+        }
+
+        .search-bar {
+            float: right;
+            margin-top: 0px;
+            /* 검색 바를 오른쪽으로 정렬합니다. */
+        }
+
+        .search-bar form {
+
+            float: right;
+            /* 추가 */
+            vertical-align: middle;
+            /* 추가 */
+            border-radius: 20px;
+            background-color: #ffffff;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .search-bar input[type="text"] {
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .search-bar input[type="submit"] {
+            border: 1px solid black;
+            padding: 5px 10px;
+            background-color: #808080;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .search-bar input[type="submit"]:hover {
+            background-color: #696969;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <header id="main-header">
+            <hgroup>
+                <h1 class="master-title">HTML5 Example Preview</h1>
+                <h2 class="master-description">한국기술교육직업전문학교</h2>
+            </hgroup>
+            
+            <nav id="main-navigation"
+            style="border-top: 1px solid black;
+            overflow:hidden;
+            border-bottom: 1px solid black;">
+                <div class="pull-left">
+                    <ul class="outer-menu">
+                        <li class="outer-menu-item">
+                            <span class="menu-title">HTML5</span>
+                        </li>
+                        <li class="outer-menu-item">
+                            <span class="menu-title">CSS3</span>
+                        </li>
+                        <li class="outer-menu-item">
+                            <span class="menu-title">JavaScript</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pull-right">
+                    <!-- content-box 클래스 추가 -->
+                    <nav id="content-box" class="content-box">
+                        <div class="search-bar">
+                            <form>
+                                <input type="text" class="input-search" />
+                                <input type="submit" class="input-search-submit" value="검색" />
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </nav>
+            
+        </header>
+        <div id="content">
+            <section id="main-section">
+                <article>
+                    <div class="article-header">
+                        <h1 class="article-title">HTML5 개요와 활용</h1>
+                        <p class="article-date">2018년 08월 21일</p>
+                    </div>
+                    <div class="article-body">
+                        <img src="http://placehold.it/430x280" />
+                        <br />
+                        <br />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo justo ac lorem
+                            pretium vitae rhoncus lectus ullamcorper. Aliquam facilisis euismod diam sollicitudin
+                            commodo. Nunc sagittis sapien venenatis lorem vestibulum cursus pellentesque mi sodales.
+                            Donec pellentesque hendrerit turpis, vitae tempor nibh ultricies at. Aliquam consequat
+                            rutrum erat, vel sodales tellus sagittis at. Proin sollicitudin augue eu augue vehicula
+                            vitae bibendum odio porta. Aliquam elit arcu, venenatis in imperdiet ut, scelerisque non
+                            dolor. Donec in vulputate tortor. Fusce egestas rutrum mi quis ultricies. Vivamus blandit
+                            augue ac felis ullamcorper consectetur. Curabitur pretium fringilla neque, vitae cursus
+                            massa auctor vitae. Integer non massa sit amet lacus accumsan blandit. Vivamus fermentum
+                            tellus at justo iaculis eu tempus lorem venenatis. Suspendisse quis eros consectetur tellus
+                            posuere commodo. In hac habitasse platea dictumst.</p>
+                        <br />
+                        <p>Praesent orci quam, ornare sed scelerisque ac, porta a justo. Pellentesque quis magna sed
+                            magna vehicula semper ac ut enim. Duis ut mattis ligula. Mauris at sem elit. Vestibulum
+                            justo tortor, malesuada non tincidunt quis, feugiat ut metus. Maecenas varius neque ut diam
+                            ultrices scelerisque. Praesent lectus massa, tincidunt vel adipiscing non, vehicula ut
+                            magna. Cras quis lacinia ipsum. Sed consequat consectetur volutpat. Integer sed tortor
+                            risus. Donec accumsan ante vel justo porttitor volutpat.</p>
+                        <hr />
+                    </div>
+                </article>
+                <article>
+                    <div class="article-header">
+                        <h1 class="article-title">HTML5 응용과 실습</h1>
+                        <p class="article-date">2018년 08월 20일</p>
+                    </div>
+                    <div class="article-body">
+                        <img src="http://placehold.it/430x280" />
+                        <br />
+                        <br />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo justo ac lorem
+                            pretium vitae rhoncus lectus ullamcorper. Aliquam facilisis euismod diam sollicitudin
+                            commodo. Nunc sagittis sapien venenatis lorem vestibulum cursus pellentesque mi sodales.
+                            Donec pellentesque hendrerit turpis, vitae tempor nibh ultricies at. Aliquam consequat
+                            rutrum erat, vel sodales tellus sagittis at. Proin sollicitudin augue eu augue vehicula
+                            vitae bibendum odio porta. Aliquam elit arcu, venenatis in imperdiet ut, scelerisque non
+                            dolor. Donec in vulputate tortor. Fusce egestas rutrum mi quis ultricies. Vivamus blandit
+                            augue ac felis ullamcorper consectetur. Curabitur pretium fringilla neque, vitae cursus
+                            massa auctor vitae. Integer non massa sit amet lacus accumsan blandit. Vivamus fermentum
+                            tellus at justo iaculis eu tempus lorem venenatis. Suspendisse quis eros consectetur tellus
+                            posuere commodo. In hac habitasse platea dictumst.</p>
+                        <br />
+                        <p>Proin ut fringilla sapien.</p>
+                    </div>
+                    <hr />
+                    <footer id="main-footer">
+                        <a href="#">Created By Team-koreate</a>
+                    </footer>
+                </article>
+            </section>
+        </div>
+        <aside id="main-aside">
+            <div class="aside-list">
+                <h3>카테고리</h3>
+                <ul>
+                    <li><a href="#">데이터</a></li>
+                    <li><a href="#">데이터</a></li>
+                    <li><a href="#">데이터</a></li>
+                    <li><a href="#">데이터</a></li>
+                    <li><a href="#">데이터</a></li>
+                </ul>
+            </div>
+            <div class="aside-list">
+                <h3>최근 글</h3>
+                <ul>
+                    <li><a href="#">데이터</a></li>
+                    <li><a href="#">데이터</a></li>
+                    <li><a href="#">데이터</a></li>
+                    <li><a href="#">데이터</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>

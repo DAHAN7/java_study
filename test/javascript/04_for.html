@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let even = 0,   // 짝수 합계 누적해서 저장할 변수
+            odd = 0,    // 홀수 합계 누적해서 저장할 변수
+            sum = 0;    // 전체 합계를 누적해서 저장할 변수
+
+        // 1에서 부터 2씩 증가하는 값으로 홀수 합계 저장
+        for(let i = 1; i <= 100; i = i + 2){
+            odd = odd + i;
+        }    
+        // 2에서 부터 2씩 증가하는 값으로 짝수 합계 저장
+        for(let i = 2; i <= 100; i += 2){
+            even += i;
+        }
+        // 1에서 부터 1씩 증가하는 값으로 1~100까지의 전체 합계 저장
+        for(let i = 1; i <= 100; i++){
+            sum += i;
+        }
+        document.write("홀수의 합계 : " + odd +"<br/>");    
+        document.write("짝수의 합계 : " + even +"<br/>");    
+        document.write("전체 합계 : " + sum +"<br/>");
+                
+        ////////////////////////////////////////////////////////
+        even = odd = sum = 0;
+        for(let i = 1; i <= 100; i++){
+            sum = sum + i; // 전체 합계
+            //정수를 2로 나누었을대 나머지는 0 또는 1
+            if(i % 2 == 0){
+                //2로 나누어 떨어질 때 even에 누적해서 합산
+                even += i;
+            }else{
+                //2로 나누었을대 나머지가 1인 홀수를 누적해서 합산
+                odd += i;
+            }
+        }           
+        document.write("홀수의 합계 : " + odd +"<br/>");    
+        document.write("짝수의 합계 : " + even +"<br/>");    
+        document.write("전체 합계 : " + sum +"<br/>");
+        
+        //////////////////////////////////////////////////
+        odd = even = sum = 0;
+        // 반복 횟수를 누적해서 저장할 변수
+        let count = 0;
+
+        for(let i = 1; i < 100; i+=2){
+            count++;
+            odd += i;
+            even += (i+1);
+        }
+        sum = odd + even;
+        document.write(`반복횟수 : ${count}번 입니다.<br/>`);
+        document.write(`홀수 합계 : ${odd}<br/>`);
+        document.write(`짝수 합계 : ${even}<br/>`);
+        document.write(`전체 합계 : ${sum}<br/>`);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

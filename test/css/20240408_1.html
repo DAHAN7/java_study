@@ -1,0 +1,50 @@
+<!-- test\css\20240408_1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol{
+            list-style:none;
+            padding-left:0;
+        }
+        nav{
+            width: 1000px;
+            margin: 20px auto;
+        }
+        ol li{
+            border:1px solid black;
+            width:250px;
+            height:50px;
+            box-sizing: border-box;
+            background-color:gray;
+            color:white;
+            float: left;
+            text-align: center;
+            line-height: 50px;/*줄간격*/
+/* 
+            display: inline-block;
+            margin-left:-6px;
+             */
+        }
+        ol li:hover{
+            background-color:white;
+            color:gray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- nav>ol>li{menu-$}*4 -->
+    <nav>
+        <ol>
+            <li>menu-1</li>
+            <li>menu-2</li>
+            <li>menu-3</li>
+            <li>menu-4</li>
+        </ol>
+    </nav>
+</body>
+</html>

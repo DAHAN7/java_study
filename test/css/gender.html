@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Restroom</title>
+</head>
+<body>
+
+<script>
+
+    function getGenderInput() {
+        return prompt("성별을 입력하세요 (남성, 남, 여성, 여 중 하나):");
+    }
+
+
+    function showRestroomLocation(gender) {
+        if (gender === "남성" || gender === "남") {
+            document.write("남자 화장실은 왼쪽입니다.");
+        } else if (gender === "여성" || gender === "여") {
+            document.write("여자 화장실은 오른쪽입니다.");
+        } else {
+            document.write("화장실을 찾을 수 없습니다.");
+        }
+    }
+
+
+    function main() {
+        var genderInput = getGenderInput();
+
+
+        showRestroomLocation(genderInput);
+    }
+
+
+    main();
+</script>
+
+</body>
+</html>

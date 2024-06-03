@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Arrow</title>
+</head>
+<body>
+
+<script>
+    // 사용자로부터 가로길이를 입력받는 함수
+    function getWidth() {
+        return prompt("가로길이를 입력하세요:");
+    }
+
+    // 화살표 출력 함수
+    function printArrow(width) {
+        // 상단 부분 출력
+        for (var i = 1; i <= width; i++) {
+            // 현재 줄의 별(*) 개수만큼 출력
+            for (var j = 1; j <= i; j++) {
+                document.write("* ");
+            }
+            // 줄 바꿈
+            document.write("<br>");
+        }
+
+        // 하단 부분 출력
+        for (var i = width - 1; i >= 1; i--) {
+            // 현재 줄의 별(*) 개수만큼 출력
+            for (var j = 1; j <= i; j++) {
+                document.write("* ");
+            }
+            // 줄 바꿈
+            document.write("<br>");
+        }
+    }
+
+    // 메인 함수
+    function main() {
+        var width = parseInt(getWidth());
+
+        // 유효한 숫자인지 확인
+        if (!isNaN(width)) {
+            // 화살표 출력
+            printArrow(width);
+        } else {
+            document.write("유효한 숫자를 입력하세요.");
+        }
+    }
+
+    // 메인 함수 호출
+    main();
+</script>
+
+</body>
+</html>

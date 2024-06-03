@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Text Animation</title>
+    <style>
+        * {
+            border: 1px solid black;
+            }
+
+        @keyframes rotateText {
+            0% {
+                transform: translateX(-50%) rotateY(0deg);
+            }
+
+            100% {
+                transform: translateX(-50%) rotateY(360deg);
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+            /* 원근법을 적용하여 3D 효과 부여 */
+        }
+
+        .text {
+            font-size: 48px;
+            font-weight: bold;
+            transform-style: preserve-3d;
+            /* 3D 변환을 요소에 적용 */
+            animation: rotateText 5s linear infinite;
+            /* rotateText 애니메이션 적용 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">KOREATE</div>
+</body>
+
+</html>

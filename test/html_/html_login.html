@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test4</title>
+</head>
+
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <td colspan="2"align="center"><b>회원가입</b></td>
+            </tr>
+            <tr>
+                <td><label for="mail">이메일</label></td>
+                <td><input id="mail" type="email" name="email" /></td> 
+            </tr>
+            <tr>
+                <td><label for="name">이름</label></td>
+                <td><input id="name" type="text" name="name" /></td> 
+            </tr>
+            <tr>
+                <td><label for="password">비밀번호</label></td>
+                <td><input id="password" type="password" name="password" /></td> 
+            </tr>
+            <tr>
+                <td><label for="confirm_password">비밀번호 확인</label></td>
+                <td><input id="confirm_password" type="password" name="confirm_password" /></td> 
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input id="man" type="radio" name="gender" value="m" />
+                    <label for="man">남자</label>
+                    <input id="woman" type="radio" name="gender" value="w" checked/>
+                    <label for="woman">여자</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="age">나이</label></td>
+                <td><input id="age" type="number" name="age" /></td> 
+            </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="2" style="text-align:center;"><input type="submit" value="제출" /></td> 
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+
+</html>

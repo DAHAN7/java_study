@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th colspan="2">회원정보수정</th>
+        </tr>
+        <tr>
+            <td>아이디</td>
+            <!-- 
+                입력태그의 value 속성값을 변경 못하게 하는 속성 
+                disabled , readonly
+            -->
+            <td><input type="text" value="userid" disabled/></td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input type="password" /></td>
+        </tr>
+        <tr>
+            <td>비밀번호 확인</td>
+            <td><input type="password" /></td>
+        </tr>
+        <tr>
+            <td rowspan="3">주소</td>
+            <td><input type="text" placeholder="우편번호"></td>
+        </tr>
+    <tr>
+        <td><input type="text" placeholder="주소"></td>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="상세주소"></td>
+    </tr>
+    <tr>
+        <td>생년월일</td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td>이름</td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td>전화번호</td>
+        <td>
+            <input type="text" value="010" disabled style="width: 60px;"/>
+            <input type="text" value="1234" readonly size="4"/>
+            <input type="text" value="5970" size="4" maxlength="4"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+        <button type="submit">수정완료</button>
+        <button type="button">회원가입</button>
+        </td>
+    </tr>
+    </table>
+</body>
+</html>

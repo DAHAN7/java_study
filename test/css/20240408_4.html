@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#wrapper{
+            width:900px;
+            min-height:300px;
+            margin:0 auto;
+            color:#fff;
+        }
+
+        header, footer, nav, aside, section{
+            border:1px solid gray;
+            padding:10px;
+        }
+
+        header{
+            height:50px;
+            background-color:skyblue;
+            margin-bottom:10px;
+        }
+
+        main{
+            overflow:hidden;
+            margin-bottom:10px;
+        }
+
+        aside, section, nav{
+            float:left;
+            box-sizing: border-box;
+            height:500px;
+        }
+
+        nav, aside{
+            background-color:pink;
+            width:100px;
+        }
+
+        nav{
+            margin-right:10px;
+        }
+
+        aside{
+            margin-left:10px;
+        }
+
+        section{
+            width:680px;
+            background-color: lightgreen;
+        }
+
+        footer{
+            background-color: skyblue;
+            height:50px;
+        }
+
+        nav ol{
+            list-style: none;
+            padding:0;
+            margin:0;
+        }
+
+        nav ol li{
+            width:100%;
+            text-align:center;
+        }
+
+        nav ol li:hover{
+            color:black;
+            cursor:pointer;
+        }
+
+        article{
+            width:90%;
+            margin:20px;
+            background-color:#999;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <p>header</p>
+        </header>
+        <main>
+            <nav>
+                <p>nav</p>
+                <!-- ol>li{menu-$}*3 -->
+                <ol>
+                    <li>menu-1</li>
+                    <li>menu-2</li>
+                    <li>menu-3</li>
+                </ol>
+            </nav>
+            <section>
+                <p>section</p>
+                <article>
+                    <p>article</p>
+                    <!-- p>lorem100 -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iusto obcaecati dolore dolor! Saepe recusandae voluptatum fuga ipsa ullam, labore illo quasi aut minima dicta in quod vero ad necessitatibus ipsam quaerat mollitia facere incidunt laborum animi, odit, eum esse magnam expedita. Aliquam doloremque vitae, sint ipsa pariatur id minima exercitationem similique iure qui nobis quo harum sed, autem, fugit non perspiciatis velit repudiandae tempore fugiat reiciendis. Quas hic odit ipsa ullam enim eius iure commodi reprehenderit adipisci ab libero vel sint pariatur maiores quod iusto recusandae vero totam explicabo praesentium veniam quis nihil, deserunt magnam. Sapiente numquam tenetur voluptatibus.</p>
+                </article>
+            </section>
+            <aside>
+                <p>aside</p>
+            </aside>
+        </main>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+</body>
+</html>

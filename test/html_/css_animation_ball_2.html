@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball Animation</title>
+    <style>
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(calc(100vh - 50px));
+            }
+        }
+
+        .ball-container {
+            display: flex;
+            justify-content: flex-start;
+            /* 공들을 컨테이너의 시작 부분에 붙임 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: skyblue;
+            border-radius: 50%;
+            margin-right: 10px;
+            /* 오른쪽에 간격을 줌 */
+            animation: bounce 3s ease infinite;
+            /* bounce 애니메이션 적용 */
+        }
+
+        .ball:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .ball:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .ball:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .ball:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .ball:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+        .ball:hover{
+            cursor:wait;
+            /* 
+                animation 동작 상태 지정 속성
+                running : 동작 
+                paused  : 일시 정지
+            */
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ball-container">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>

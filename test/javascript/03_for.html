@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Hello World!!!</h1>");
+        // i : 6 5 4 3 2 1
+        for(let i = 6; i >= 1; i--){
+            let text = "<h1>Hello World!!!</h" + i + ">";
+            document.write(text);
+            // template 문자열 표현
+            document.write(`<h${i}>Hello World!!!</h${i}>`);
+        }
+    </script>
+</body>
+</html>

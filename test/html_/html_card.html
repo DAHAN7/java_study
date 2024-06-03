@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:hover활용</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .image-container {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.3s ease;
+        }
+
+        .image:hover {
+            opacity: 1;
+            /* 마우스를 올렸을 때 투명도 변경 */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("C:\Users\ekgks\Desktop\trainee_practice\02_HTML_CSS_practice\실습자료\img\back.png");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            opacity: 1;
+            /* 초기에는 보이는 상태 */
+            transition: opacity 0.3s ease;
+
+        }
+
+        .image-container:hover .overlay {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("C:\Users\admin\AppData\Local\Temp\89f15b14-bed5-4307-9df1-c180683ecc9c_trainee_practice (1).zip.c9c\trainee_practice\02_HTML_CSS_practice\실습자료\img\back.png");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            opacity: 1;
+
+        }
+
+        .image-container:hover .overlay {
+            background-image: url("C:\Users\admin\AppData\Local\Temp\89f15b14-bed5-4307-9df1-c180683ecc9c_trainee_practice (1).zip.c9c\trainee_practice\02_HTML_CSS_practice\실습자료\img\back.png");
+            /* 상대 경로로 변경 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="C:\Users\admin\AppData\Local\Temp\89f15b14-bed5-4307-9df1-c180683ecc9c_trainee_practice (1).zip.c9c\trainee_practice\02_HTML_CSS_practice\실습자료\img\back.png" alt="Original Image"
+            class="image">
+        <div class="overlay">
+            <img src="C:\Users\admin\AppData\Local\Temp\14da2a28-3679-47c9-a065-768450c36496_trainee_practice (1).zip.496\trainee_practice\02_HTML_CSS_practice\실습자료\img\spade.png" alt="hover Image"
+                class="image">
+        </div>
+    </div>
+</body>
+
+</html>
