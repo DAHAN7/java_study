@@ -31,7 +31,7 @@ public class Location{
 	
 	@Override
 	public String toString() {
-		return "Location [longitude=" + longitude + ", latitude=" + latitude + "]";
+		return "Location [경도=" + longitude + ", 위도=" + latitude + "]";
 	}
 	
 }
