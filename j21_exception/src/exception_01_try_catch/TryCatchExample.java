@@ -26,14 +26,14 @@ public class TryCatchExample {
 				System.out.println("입력하려는 점수를 한번 더 입력해주세요.");
 				String num = sc.next();
 				
-				int number = Integer.parseInt(num);//"삼"
+				int number = Integer.parseInt(num); // "삼"
 				
-				// 한번더 입력받아 일치하는 값일때 배열에 값 추가
+				// 한번더 입력받아 일치하는 값일 때 배열에 값 추가
 				if(score == number) {
-					scores[index] = score;
+					scores[index] = score; 
 				}else {
 					System.out.println("일치하지 않습니다.");
-					scores[index]=0;
+					scores[index] = 0;
 				}
 				
 				// 사용할 수 없는 인덱스 번호(음수) 일 경우 while 문 종료
@@ -43,15 +43,16 @@ public class TryCatchExample {
 				System.out.println("배열에 사용할 수 없는 인덱스 번호입니다.");
 				System.out.println("다시 입력해 주세요.");
 				continue;
-			}catch(InputMismatchException e) { // java.util package import 추가
+			}catch(InputMismatchException | NumberFormatException e) { // java.util package import 추가
 				System.out.println("정수가 입력되지 않음");
 				sc.next(); // 정수가 아닌 사용되지 못한 입력값을 제거
 				continue;
-			}catch(Exception e) {
-			//발생된 예외에 대한 정보를 console에 출력
-			//e.printStackTrace();
-			break;//while 종료
-			}finally {
+			}catch(Exception e){
+				// 발생된 예외에 대한 정보를 console에 출력
+				// e.printStackTrace();
+				break; // while 종료
+			} //catch(NumberFormatException e){}
+			finally {
 				System.out.println(Arrays.toString(scores));
 				System.out.println("항상 실행");
 			}
@@ -65,3 +66,8 @@ public class TryCatchExample {
 	}
 
 }
+
+
+
+
+
