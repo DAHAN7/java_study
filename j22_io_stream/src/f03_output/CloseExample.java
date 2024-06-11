@@ -60,11 +60,3 @@ public class CloseExample {
 	}
 
 }
-
-
-
-
-
-
-
-
