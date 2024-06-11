@@ -19,7 +19,7 @@ public class FileExample {
 		System.out.println(separator);
 		
 		// 구분자를 한 문자로 표현
-		char separatorChar = File.separatorChar;
+	 	char separatorChar = File.separatorChar;
 		System.out.println(separatorChar);
 		
 		dir = "C:"+File.separator+"Temp"+File.separator+"dir";
@@ -115,8 +115,6 @@ public class FileExample {
 		file2 = new File("C:\\Temp\\dir\\aaa");
 		isDeleted = file2.delete();
 		System.out.println("파일 삭제 여부 : " + isDeleted);
-		
-		
 		
 	}// end main
 
