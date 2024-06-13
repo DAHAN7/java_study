@@ -19,7 +19,8 @@ public class SystemInExmaple {
 		System.out.println(is.read());
 		System.out.println(is.read());
 		
-		// is.close();
+		// is.close();  Stream closed
+		
 		System.out.println("입력해 주세요!");
 		byte[] bytes = new byte[100];
 		int readBytes = is.read(bytes);
