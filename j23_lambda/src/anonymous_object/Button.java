@@ -3,6 +3,7 @@ package anonymous_object;
 @FunctionalInterface
 interface OnClickListener{
 	void onClick();
+	//void onTouch();
 }
 
 // 등록된 기능에 따라 서로 다른 동작을 하는 Button class
