@@ -39,7 +39,7 @@ public class ServerExample {
 				// IP 주소
 				String host = isa.getHostString();
 				System.out.println("연결 수락 : " + host);
-				
+
 				Client c = new Client(client);
 				clients.add(c);
 				System.out.println("연결된 client 수 : " + clients.size());
@@ -53,8 +53,25 @@ public class ServerExample {
 
 	// 할당된 자원 해제 후 안전하게 서버 종료
 	public void stopServer() {
+		System.out.println("서버 자원 해제");
+		for (Client client : clients) {
+			if (!client.socket.isClosed()) {
+				try {
+					client.socket.close();
+				} catch (IOException e) {
+				}
+			} // end if
+		} // end for
 
-	}
+		// 할당 받은 포트 반납
+		if (serverSocket != null && !serverSocket.isClosed()) {
+			try {
+				serverSocket.close();
+			} catch (IOException e) {
+			}
+		} // end if
+
+	} // end stopServer
 
 	public static void main(String[] args) {
 		ServerExample server = new ServerExample();
